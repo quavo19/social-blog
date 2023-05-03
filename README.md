@@ -1,3 +1,56 @@
+<a name="readme-top"></a>
+
+# 📗 Table of Contents
+
+- [� Table of Contents](#-table-of-contents)
+- [📖 My Blog ](#-my-blog-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments \</a](#-acknowledgments-a)
+  - [📝 License ](#-license-)
+
+# 📖 My Blog <a name="about-project"></a>
+
+**Social Blog** is a Ruby on Rails blog app that lets users create and publish posts, and add comments to them.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://ruby.org/">Ruby-on-Rails</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://ruby.org/">Ruby</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
 ### Key Features <a name="key-features"></a>
 
 - **Create post**
@@ -8,7 +61,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- not available yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -32,7 +85,7 @@ Clone this repository to your desired folder:
 
 ```
   cd my-folder
-  git clone https://github.com/didierganthier/my_blog.git
+  git clone https://github.com/quavo19/social-blog.git
 ```
 
 ### Install
@@ -68,19 +121,19 @@ You can deploy this project using:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
-👤 **Author1**
+👤 **Author**
 
-- GitHub: [@didierganthier](https://github.com/didierganthier)
-- Twitter: [@didierganthier_](https://twitter.com/didierganthier_)
-- LinkedIn: [Didier Peran Ganthier](https://linkedin.com/in/didierganthier)
+- GitHub: [@githubhandle](https://github.com/quavo19)
+- Twitter: [@twitterhandle](https://twitter.com/DonaldAkite)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/donald-akite-299a31222/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Follow author**
+- [ ] **Admin view**
 - [ ] **Like comment**
 - [ ] **Block author**
 

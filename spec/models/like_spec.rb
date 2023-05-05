@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-
   describe 'callbacks' do
     describe 'after_save' do
       it 'updates the likes_counter of the associated post' do

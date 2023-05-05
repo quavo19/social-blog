@@ -21,4 +21,10 @@ RSpec.describe User, type: :model do
     user.posts_counter = 0
     expect(user).to be_valid
   end
+
+  it 'returns the 3 most recent posts' do
+    user.save!
+    4.times { |i| user.posts.create(title: "Post #{i}", comments_counter: 0, likes_counter: 0) }
+    expect(user.recent_posts.pluck(:title)).to eq(['Post 3', 'Post 2', 'Post 1'])
+  end
 end

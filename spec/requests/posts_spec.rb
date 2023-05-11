@@ -19,6 +19,10 @@ RSpec.describe 'Posts', type: :request do
       get '/', params: { user_id: user.id }
       expect(response.body).to render_template(:index)
     end
+    it 'show correct placeholder text' do
+      get '/', params: { user_id: user.id }
+      expect(response.body).to include('<h1>this is the home page <h1>')
+    end
   end
   describe 'GET /show' do
     let(:user) { User.create(name: 'Akite Donald', posts_counter: 0) }

@@ -31,5 +31,9 @@ RSpec.describe 'Users', type: :request do
       get '/users/1'
       expect(response).to render_template('show')
     end
+    it 'show correct placeholder text' do
+      get '/users/1'
+      expect(response.body).to include('<div>show details of a specific user</div>')
+    end
   end
 end

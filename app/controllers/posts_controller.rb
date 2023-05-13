@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     @post = @user.posts.find(params[:id])
     @comments = Comment.where(post_id: params[:id]).order(created_at: :desc).limit(5)
   end
+
   def create
     @post = Post.new(post_params)
     @post.author = current_user

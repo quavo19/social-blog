@@ -1,1 +1,15 @@
-<h1>this is the home page <h1>
+<% @users.each do |user| %>
+    <%= link_to user_path(user.id) do %>
+        <div class='user-container'>
+        <div class='image-container'>
+            <img src='<%= user.photo%>'/>
+        </div>
+        <div class='user-name'>
+            <h3>
+                <%= user.name %>
+            </h3>
+            <p>number of posts: <%= user.posts_counter%></p>
+        </div>
+        </div>
+    <%end%>
+<%end%>

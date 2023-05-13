@@ -1,1 +1,35 @@
-<div>show details of a specific user</div>
+<div class="Show-user">
+  <div class='user-container'>
+    <div class='image-container'>
+        <img src='<%= @user.photo%>'/>
+    </div>
+        <div class='user-name'>
+        <h3>
+            <%= @user.name %>
+        </h3>
+      <p>number of posts: <%= @user.posts_counter%></p>
+    </div>
+  </div>
+  <div class="bio-container">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+  
+    <% @user.recent_posts.each do |post| %>
+    <div class="recent-posts">
+    <h3> <%= post.title %></h3>
+    <p> <%= post.text%></p>
+    <div class="comment-like">
+        <p>comments: <%= post.comments_counter %></p>
+        <p>likes: <%= post.likes_counter %></p>
+    </div>
+    </div>
+    <%end%>
+    <div class="button-container">
+        <%= link_to 'Create A New Post', new_user_post_path(@user), class: "Create-Post" %>
+        <%= link_to [@user, :posts] do %>
+           <button type="button">see more</div>
+        <%end%>
+    </div>
+  
+</div>

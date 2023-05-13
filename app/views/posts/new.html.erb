@@ -1,0 +1,15 @@
+<div>
+  <%= form_with model: @post, url: user_posts_path, data: { turbo: false } do |form| %>
+    <div class="mb-4">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+    <div class="mb-4">
+      <%= form.label :text, class: "form-label" %>
+      <%= form.text_area :text, class: "form-control" %>
+    </div>
+    <div class="text-center">
+      <%= form.submit "Create Post", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

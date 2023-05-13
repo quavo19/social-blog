@@ -1,15 +1,109 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  all: unset;
+  text-decoration: none;
+}
+
+.post-show-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-show-header .show-index {
+  width: 50%;
+}
+
+.main-container {
+  padding: 10%;
+}
+
+.user-container {
+  max-height: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.image-container img {
+  height: 200px;
+  width: 170px;
+  object-fit: cover;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.user-name {
+  border: 2px solid;
+  border-radius: 5px;
+  display: flex;
+  padding-left: 10%;
+  width: 80%;
+  background: #80808080;
+}
+
+.user-name h3 {
+  font-size: 3rem;
+  width: 70%;
+}
+
+.user-name p {
+  margin: 7rem 1rem;
+  font-weight: 500;
+}
+
+.bio-container {
+  min-height: 200px;
+}
+
+.comments,
+.recent-posts,
+.bio-container {
+  width: 100%;
+  border: 2px solid;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.comment-like {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.comment-like p {
+  padding: 0 10px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.like-comment {
+  display: flex;
+}
+
+.middle {
+  margin: 0 10px;
+}
+
+.Create-Post,
+.button-container button {
+  all: unset;
+  margin: 0 10px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 8px;
+}

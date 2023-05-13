@@ -1,1 +1,47 @@
-<h1>this is the posts page</h1>
+<div>
+<div class='user-container'>
+    <div class='image-container'>
+        <img src='<%= @user.photo%>'/>
+    </div>
+        <div class='user-name'>
+        <h3>
+            <%= @user.name %>
+        </h3>
+      <p>number of posts: <%= @user.posts_counter%></p>
+    </div>
+  </div>
+<% @posts.each do |post| %>
+    <div>
+    <%= link_to user_post_path(@user,post) do %>
+        <div class="recent-posts">
+    <h3> <%= post.title %></h3>
+    <p> <%= post.text%></p>
+    <div class="comment-like">
+        <p>comments: <%= post.comments_counter %></p>
+        <p>likes: <%= post.likes_counter %></p>
+    </div>
+    </div>
+    
+     <% if post.comments.count > 0 %>
+     <div class="comments">
+              <span class='post_comments_likes'>
+                  <% post.recent_comments.each do |comment| %>
+                    <p class='post_comment'>
+                      <%= comment.author.name%>:
+                      <%= comment.text %>
+                    </p>
+                  <% end %>
+              </span>
+              
+            <% end %>
+    
+    </div>
+    
+    <%end %>
+    <%end%>
+    <div class="button-container">
+      <button>
+        Paginage
+      </button>
+</div>
+</div>

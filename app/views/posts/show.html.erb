@@ -25,3 +25,8 @@
               </div>
             <% end %>
     </div>
+    <div class='like-comment'>
+  <%= link_to 'Back', user_posts_path, class: "btn btn-primary" %>
+  <%= button_to "Like", user_post_likes_path(@post.author.id, post_id: @post.id), method: :post, class: "middle btn btn-primary" %>
+  <%= link_to 'create comment', new_user_post_comment_path(@post.author.id, @post.id), class: "btn btn-primary" %>
+</div>

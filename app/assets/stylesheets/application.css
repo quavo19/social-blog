@@ -91,8 +91,18 @@ a {
   cursor: pointer;
 }
 
+.like-comment {
+  display: flex;
+}
+
+.middle {
+  margin: 0 10px;
+}
+
+.Create-Post,
 .button-container button {
   all: unset;
+  margin: 0 10px;
   padding: 10px;
   border: 2px solid;
   border-radius: 8px;

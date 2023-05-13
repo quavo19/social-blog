@@ -1,1 +1,27 @@
-<h1>show a specific post</h1>
+
+    <div>
+        <div class="recent-posts">
+        <div class="post-show-header">
+            <h3> <%= @post.title %></h3>
+            <div class=" show-index comment-like">
+                <p>comments: <%= @post.comments_counter %></p>
+                <p>likes: <%= @post.likes_counter %></p>
+            </div>
+        </div>
+    <p> <%= @post.text%></p>
+    
+    </div>
+    
+     <% if @post.comments.count > 0 %>
+     <div class="comments">
+              <span class='post_comments_likes'>
+                  <% @post.comments.each do |comment| %>
+                    <p class='post_comment'>
+                      <%= comment.author.name%>:
+                      <%= comment.text %>
+                    </p>
+                  <% end %>
+              </span>
+              </div>
+            <% end %>
+    </div>

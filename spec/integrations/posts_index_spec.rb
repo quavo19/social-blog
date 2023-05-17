@@ -67,5 +67,9 @@ RSpec.describe 'Posts', type: :system, js: true do
       click_link @second_post.title
       expect(page).to have_current_path(user_post_path(@user, @second_post))
     end
+    it 'A section for pagination is displayed' do
+
+        page.has_selector?('.pagination')
+      end
   end
 end

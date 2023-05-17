@@ -10,7 +10,7 @@
       <p>number of posts: <%= @user.posts_counter%></p>
     </div>
   </div>
-<% @posts.includes([:comments]).each do |post| %>
+<% @posts.each do |post| %>
     <div>
     <%= link_to user_post_path(@user,post) do %>
         <div class="recent-posts">
@@ -25,7 +25,7 @@
      <% if post.comments.count > 0 %>
      <div class="comments">
               <span class='post_comments_likes'>
-                  <% post.recent_comments.each do |comment| %>
+                  <% post.recent_comments.includes([:author]).each do |comment| %>
                     <p class='post_comment'>
                       <%= comment.author.name%>:
                       <%= comment.text %>

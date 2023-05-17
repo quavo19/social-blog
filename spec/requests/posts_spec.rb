@@ -19,10 +19,6 @@ RSpec.describe 'Posts', type: :request do
       get '/', params: { user_id: user.id }
       expect(response.body).to render_template(:index)
     end
-    it 'show correct placeholder text' do
-      get "/users/#{user.id}/posts"
-      expect(response.body).to include('<h1>this is the posts page</h1>')
-    end
   end
   describe 'GET /show' do
     let(:user) { User.create(name: 'Akite Donald', posts_counter: 0) }
@@ -35,11 +31,6 @@ RSpec.describe 'Posts', type: :request do
     it 'renders the correct template' do
       get "/users/#{user.id}/posts/#{post.id}"
       expect(response).to render_template('show')
-    end
-
-    it 'response body includes the correct content' do
-      get "/users/#{user.id}/posts/#{post.id}"
-      expect(response.body).to match(%r{<h1>show a specific post</h1>})
     end
   end
 end

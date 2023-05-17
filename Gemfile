@@ -4,6 +4,7 @@ gem 'erb-formatter'
 gem 'rubocop', '>= 1.0', '< 2.0'
 ruby '3.2.1'
 gem 'will_paginate'
+gem 'bullet', '~> 7.0', '>= 7.0.7'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'

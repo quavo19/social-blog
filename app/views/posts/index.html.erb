@@ -25,7 +25,7 @@
      <% if post.comments.count > 0 %>
      <div class="comments">
               <span class='post_comments_likes'>
-                  <% post.recent_comments.each do |comment| %>
+                  <% post.recent_comments.includes([:author]).each do |comment| %>
                     <p class='post_comment'>
                       <%= comment.author.name%>:
                       <%= comment.text %>
@@ -40,7 +40,7 @@
     <%end %>
     <%end%>
     <div class="button-container">
-    <%= link_to 'Back', user_posts_path %>
+    <%= link_to 'Back', '/' %>
       <button>
         Paginage
       </button>

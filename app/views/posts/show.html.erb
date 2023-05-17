@@ -15,7 +15,7 @@
      <% if @post.comments.count > 0 %>
      <div class="comments">
               <span class='post_comments_likes'>
-                  <% @post.comments.each do |comment| %>
+                  <% @post.comments.includes([:author]).each do |comment| %>
                     <p class='post_comment'>
                       <%= comment.author.name%>:
                       <%= comment.text %>

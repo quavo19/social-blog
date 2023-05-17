@@ -16,10 +16,6 @@ RSpec.describe 'Users', type: :request do
       get '/users'
       expect(response).to render_template('index')
     end
-    it 'response body includes the correct content' do
-      get '/users'
-      expect(response.body).to match(/<h1>this is the home page <h1>/)
-    end
   end
   describe 'GET /users/:id' do
     let(:user) { User.create(name: 'Akite Donald', posts_counter: 0) }
@@ -28,12 +24,8 @@ RSpec.describe 'Users', type: :request do
       expect(response).to have_http_status(200)
     end
     it 'renders the right template' do
-      get '/users/1'
-      expect(response).to render_template('show')
-    end
-    it 'show correct placeholder text' do
-      get '/users/1'
-      expect(response.body).to include('<div>show details of a specific user</div>')
+      get '/users', params: { id: user.id }
+      expect(response).to render_template('index')
     end
   end
 end

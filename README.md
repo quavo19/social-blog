@@ -2,7 +2,7 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
+- [📗 Table of Contents](#-table-of-contents)
 - [📖 My Blog ](#-my-blog-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -15,7 +15,7 @@
     - [Usage](#usage)
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
-  - [👥 Authors ](#-authors-)
+  - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -128,6 +128,13 @@ You can deploy this project using:
 - GitHub: [@githubhandle](https://github.com/quavo19)
 - Twitter: [@twitterhandle](https://twitter.com/DonaldAkite)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/donald-akite-299a31222/)
+
+👤 **Choice Osobor**
+
+- GitHub: [@techEmprez](https://github.com/techEmprez)
+- Twitter: [@techEmprez](https://twitter.com/techEmprez)
+- LinkedIn: [Choice Osobor](https://www.linkedin.com/in/choice-osobor/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

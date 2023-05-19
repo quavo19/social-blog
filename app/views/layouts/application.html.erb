@@ -16,6 +16,7 @@
       <div class='navbar'>
   <h2>Rails Blog</h2>
   <div class="sign">
+     <% if user_signed_in? %>
       <%= yield %>
     </main>
   </body>

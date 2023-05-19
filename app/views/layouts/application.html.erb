@@ -17,6 +17,8 @@
   <h2>Rails Blog</h2>
   <div class="sign">
      <% if user_signed_in? %>
+      <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:'sign_out' %>
+    <% else %>
       <%= yield %>
     </main>
   </body>

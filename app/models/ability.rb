@@ -23,7 +23,7 @@ class Ability
     # For example, here the user can only update published articles.
     #
     #   can :update, Article, published: true
-    #
+    can :read, [Post, Comment]
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
     user ||= User.new
@@ -32,9 +32,7 @@ class Ability
     if user.admin?
       can :manage, :all
     else
-      can :read, :all
-      can :manage, Post, author_id: user.id
-      can :manage, Comment, author_id: user.id
+      can :manage, [Post, Comment], author_id: user.id
     end
   end
 end

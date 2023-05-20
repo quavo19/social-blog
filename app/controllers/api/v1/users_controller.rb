@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-    load_and_authorize_resource
+  load_and_authorize_resource
 
   def index
     @users = User.all
@@ -7,5 +7,5 @@ class Api::V1::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-  end
+  end
 end

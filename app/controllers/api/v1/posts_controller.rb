@@ -1,5 +1,5 @@
 class Api::V1::PostsController < ApplicationController
-    load_and_authorize_resource
+  load_and_authorize_resource
   before_action :set_user, only: %i[index show]
 
   def index

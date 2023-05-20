@@ -8,8 +8,8 @@ Rails.application.routes.draw do
           resources :comments, only: %i[index create]
         end
       end
-    end
-  end
+    end
+  end
   resources :users, only: [:index, :show] do
     resources :posts, except: [:update, :edit] do
       resources :comments, only: [:new, :create, :destroy]

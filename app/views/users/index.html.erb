@@ -6,6 +6,9 @@
         </div>
         <div class='user-name'>
             <h3>
+            <% if user == current_user %>
+                      <span>You:</span>
+                  <% end %>
                 <%= user.name %>
             </h3>
             <p>number of posts: <%= user.posts_counter%></p>

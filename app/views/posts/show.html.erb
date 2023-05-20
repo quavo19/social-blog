@@ -20,6 +20,9 @@
                       <%= comment.author.name%>:
                       <%= comment.text %>
                     </p>
+                    <% if can? :destroy, comment %>
+      <%= link_to "Delete Comment", user_post_comment_path(@post.author, @post, comment), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-primary" %>
+    <% end %>
                   <% end %>
               </span>
               </div>
@@ -27,6 +30,9 @@
     </div>
     <div class='like-comment'>
   <%= link_to 'Back', user_posts_path, class: "btn btn-primary" %>
+  <% if can? :destroy, @post %>
+  <%= link_to "Delete post", user_post_path, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+  <%end%>
   <%= button_to "Like", user_post_likes_path(@post.author.id, post_id: @post.id), method: :post, class: "middle btn btn-primary" %>
   <%= link_to 'create comment', new_user_post_comment_path(@post.author.id, @post.id), class: "btn btn-primary" %>
 </div>

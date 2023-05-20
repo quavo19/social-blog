@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
-    @post =  @post = Post.find(params[:id])
+    @post = @post = Post.find(params[:id])
     @comments = Comment.includes([:author]).where(post_id: params[:id]).order(created_at: :desc).limit(5)
   end
 

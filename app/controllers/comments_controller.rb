@@ -26,7 +26,7 @@ class CommentsController < ApplicationController
 
     redirect_to user_post_path(@user, @post) if @post.save
   end
-  
+
   def set_user
     @user = User.find(params[:user_id])
   end

@@ -43,7 +43,6 @@ class PostsController < ApplicationController
     redirect_to user_posts_path(@user) if @user.save
   end
 
-
   private
 
   def delete_post_and_its_related_objects(post)
